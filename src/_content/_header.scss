@@ -1,0 +1,30 @@
+@use '../_theme' as theme;
+
+.entry-header {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+
+  .entry-date {
+  }
+  .entry-categories {
+  }
+
+  .entry-title {
+  }
+  .entry-header-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: grid;
+    place-content: center;
+
+    a {
+      padding: 5px 10px;
+      border-radius: theme.$radius;
+      color: theme.$text-color;
+      background-color: theme.$background-color;
+    }
+  }
+}

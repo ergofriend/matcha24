@@ -1,0 +1,120 @@
+@use '../_theme' as theme;
+@use '../_mixin' as mixin;
+
+article.entry {
+  width: 800px;
+  @include mixin.max-medium {
+    width: auto;
+  }
+
+  padding: 1rem;
+  border-radius: theme.$radius;
+  background-color: theme.$content-color;
+  word-break: break-all;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid theme.$secondary-color;
+  thead {
+    background-color: theme.$background-color;
+  }
+  tr {
+    border-bottom: 1px solid theme.$secondary-color;
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }
+}
+
+// amazon buy button
+.hatena-asin-detail .hatena-asin-detail-info .asin-detail-buy {
+  border-radius: theme.$radius;
+  background-color: theme.$background-color;
+  color: theme.$text-color;
+}
+
+.hatena-star-container {
+  min-height: 30px;
+}
+
+.social-buttons {
+  min-height: 55px;
+}
+
+.comment-box {
+  border-top: 2px solid theme.$background-color;
+
+  ul.comment {
+    list-style: none;
+    padding-left: 0;
+  }
+  .leave-comment-title {
+    display: table;
+    margin-left: auto;
+  }
+}
+
+.pager {
+  min-width: 0;
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: 1fr 1fr;
+  grid-template-areas: 'pager-prev pager-next';
+  @include mixin.max-small {
+    grid-template-areas:
+      'pager-prev pager-prev'
+      'pager-next pager-next';
+    .pager-next {
+      grid-column: 1 / 3 !important;
+    }
+  }
+
+  span {
+    padding: 1rem;
+    background-color: theme.$content-color;
+    border-radius: theme.$radius;
+
+    color: theme.$primary-color;
+  }
+
+  .pager-prev,
+  .pager-next {
+    min-width: 0;
+    // text-overflow: ellipsis; /* enables ellipsis */
+    white-space: nowrap; /* keeps the text in a single line */
+    overflow: hidden; /* keeps the element from overflowing its parent */
+  }
+
+  .pager-prev {
+    grid-area: pager-prev;
+  }
+  .pager-next {
+    grid-area: pager-next;
+    grid-column: 2;
+    text-align: right;
+  }
+}
+
+// 関連記事
+.hatena-module-related-entries {
+  .hatena-module-title {
+    font-size: large;
+  }
+  ul.related-entries {
+    margin: 0;
+    padding: 0;
+
+    li:first-child,
+    li + li {
+      border-top: 2px dotted theme.$background-color;
+    }
+    li {
+      padding: 0.5rem 0;
+    }
+  }
+}

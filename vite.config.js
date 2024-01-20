@@ -3,16 +3,16 @@ import autoprefixer from "autoprefixer";
 export default {
   build: {
     rollupOptions: {
-      input: ["scss/boilerplate.scss"],
+      input: ["src/style.scss"],
       output: {
         assetFileNames: ({ name }) => name,
       },
     },
     outDir: "build",
-    cssMinify: false,
+    cssMinify: true,
   },
   css: {
-    devSourcemap: true,
+    devSourcemap: false,
     postcss: {
       plugins: [autoprefixer()],
     },

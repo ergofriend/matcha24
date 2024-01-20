@@ -1,0 +1,52 @@
+@use '../_theme' as theme;
+@use '../_mixin' as mixin;
+@use './_header';
+@use './_code';
+@use './_entry';
+@use './_sidebar';
+
+$entry-width: 800px;
+
+// エントリとサイドバーのレイアウト
+#content-inner {
+  width: 1200px;
+  @include mixin.max-large {
+    width: auto;
+    padding: 0 1rem;
+  }
+  @include mixin.max-small {
+    padding: 0 0;
+  }
+
+  margin: auto;
+  display: grid;
+  // grid-template-columns: auto 1fr;
+  grid-template-areas: 'contents sidebar';
+  justify-items: center;
+  gap: 1rem;
+  @include mixin.max-medium {
+    // grid-template-columns: 1fr;
+    grid-template-areas:
+      'contents'
+      'sidebar';
+  }
+}
+
+#wrapper {
+  width: $entry-width;
+  grid-area: contents;
+  @include mixin.max-medium {
+    width: 100%;
+  }
+}
+
+#box2 {
+  grid-area: sidebar;
+  @include mixin.max-medium {
+    width: 100%;
+    margin: auto;
+  }
+  @include mixin.max-small {
+    padding: 1rem;
+  }
+}

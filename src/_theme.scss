@@ -1,0 +1,62 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #7289da;
+    --secondary-color: #9aa9bf;
+    --text-color: #2c2f33;
+    --content-color: #ffffff;
+    --background-color: #edf2f7;
+
+    --code-comment-color: #28a443;
+    --code-constant-color: #089fb0;
+    --code-special-color: #089fb0;
+    --code-pre-proc-color: #089fb0;
+    --code-identifier-color: #38449e;
+    --code-type-color: #38449e;
+    --code-statement-color: #8a389e;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #7289da;
+    --secondary-color: #cbd9ed;
+    --text-color: #e8e9ec;
+    --content-color: #1e2026;
+    --background-color: #2c2f33;
+
+    --code-comment-color: #80e496;
+    --code-constant-color: #80ebf7;
+    --code-special-color: #80ebf7;
+    --code-pre-proc-color: #80ebf7;
+    --code-identifier-color: #a9b3ff;
+    --code-type-color: #a9b3ff;
+    --code-statement-color: #a9b3ff;
+  }
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$text-color: var(--text-color);
+$content-color: var(--content-color);
+$background-color: var(--background-color);
+
+$code-comment-color: var(--code-comment-color);
+$code-constant-color: var(--code-constant-color);
+$code-special-color: var(--code-special-color);
+$code-pre-proc-color: var(--code-pre-proc-color);
+$code-identifier-color: var(--code-identifier-color);
+$code-type-color: var(--code-type-color);
+$code-statement-color: var(--code-statement-color);
+
+$radius: 5px;
+
+// force dark theme
+// はてなブログのヘッダが prefers-color-scheme に追従しないので固定する
+#globalheader-container,
+#footer {
+  background-color: #2c2f33;
+  color: #e8e9ec;
+  a {
+    color: #7289da;
+  }
+}

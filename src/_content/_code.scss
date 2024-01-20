@@ -1,0 +1,40 @@
+@use '../_theme' as theme;
+
+.entry-content code,
+pre.code {
+  color: theme.$text-color;
+  background-color: theme.$background-color;
+}
+
+pre {
+  white-space: pre-wrap;
+  padding: 1rem;
+
+  .synComment {
+    color: theme.$code-comment-color;
+  }
+
+  .synConstant {
+    color: theme.$code-constant-color;
+  }
+
+  .synSpecial {
+    color: theme.$code-special-color;
+  }
+
+  .synPreProc {
+    color: theme.$code-pre-proc-color;
+  }
+
+  .synIdentifier {
+    color: theme.$code-identifier-color;
+  }
+
+  .synType {
+    color: theme.$code-type-color;
+  }
+
+  .synStatement {
+    color: theme.$code-statement-color;
+  }
+}

@@ -1,0 +1,92 @@
+@use '../_theme' as theme;
+@use '../_mixin' as mixin;
+
+#box2-inner {
+  max-width: 300px;
+  @include mixin.max-medium {
+    max-width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  a {
+    color: theme.$text-color;
+  }
+
+  .hatena-module {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  // プロフィールの要素
+  img.profile-icon {
+    border-radius: theme.$radius;
+  }
+
+  .hatena-module-title {
+    font-size: larger;
+  }
+
+  .hatena-module-body {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    font-size: medium;
+    .urllist-title-link {
+      font-size: larger;
+    }
+    a {
+      color: theme.$primary-color;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    li + li {
+      border-top: 1px solid theme.$secondary-color;
+    }
+  }
+
+  form.search-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+
+    input.search-module-input,
+    input.search-module-button {
+      color: theme.$text-color;
+      border: none;
+      border-radius: theme.$radius;
+      height: 2rem;
+    }
+    input.search-module-input {
+      padding-left: 10px;
+      &::placeholder {
+        color: theme.$text-color;
+      }
+      background-color: theme.$content-color;
+      &:focus {
+        outline: solid 2px theme.$primary-color;
+      }
+    }
+    input.search-module-button {
+      font-weight: bold;
+      color: white;
+      background-color: theme.$primary-color;
+      padding: 0 0.75rem;
+    }
+
+    @include mixin.max-medium {
+      max-width: 300px;
+    }
+  }
+}

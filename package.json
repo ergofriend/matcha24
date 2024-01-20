@@ -11,6 +11,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "normalize.css": "^8.0.1",
+    "sanitize.css": "^13.0.0",
     "sass": "^1.63.6",
     "vite": "^4.4.3"
   }
