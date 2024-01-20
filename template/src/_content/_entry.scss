@@ -50,8 +50,18 @@ table {
   border-top: 2px solid theme.$background-color;
 
   ul.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    padding-top: 1rem;
+    margin: 0;
+  }
+  li.entry-comment {
+    background-color: theme.$background-color;
+    padding: 0 1rem;
+    border-radius: theme.$radius;
   }
   .leave-comment-title {
     display: table;
