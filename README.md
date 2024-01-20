@@ -2,11 +2,10 @@
 
 はてなブログのテーマです。
 
-## ライトテーマ
-
-![light screenshot](/screenshot.light.png)
-
-
 ## ダークテーマ
 
-![dark screenshot](/screenshot.dark.png)
+![dark screenshot](/screenshot/dark.png)
+
+## ライトテーマ
+
+![light screenshot](/screenshot/light.png)
